@@ -1,0 +1,384 @@
+{
+	"openapi": "3.0.1",
+	"info": {
+		"title": "Betty Blocks Remote model",
+		"license": {
+			"name": "Apache 2.0",
+			"url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+		},
+		"version": "1.0.0"
+	},
+	"servers": [{
+		"url": "https://insis-datasource.betty.app"
+	}],
+	"tags": [{
+		"name": "Betty Blocks Data source",
+		"description": "Betty Blocks Data source"
+	}],
+	"paths": {
+		"/Diagnosis/api/runtime/ce2072984fb54c16816a35fde6194550": {
+			"get": {
+				"summary": "Get Diagnosis",
+				"operationId": "listDiagnosis",
+				"responses": {
+					"200": {
+						"description": "Valid response",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/Diagnosis"
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [{
+					"api_key": ["write:users", "read:users"]
+				}]
+			}
+		},
+		"/_File/api/runtime/ce2072984fb54c16816a35fde6194550": {
+			"get": {
+				"summary": "Get _File",
+				"operationId": "list_File",
+				"responses": {
+					"200": {
+						"description": "Valid response",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/_File"
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [{
+					"api_key": ["write:users", "read:users"]
+				}]
+			}
+		},
+		"/InsurancePlan/api/runtime/ce2072984fb54c16816a35fde6194550": {
+			"get": {
+				"summary": "Get InsurancePlan",
+				"operationId": "listInsurancePlan",
+				"responses": {
+					"200": {
+						"description": "Valid response",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/InsurancePlan"
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [{
+					"api_key": ["write:users", "read:users"]
+				}]
+			}
+		},
+		"/Member/api/runtime/ce2072984fb54c16816a35fde6194550": {
+			"get": {
+				"summary": "Get Member",
+				"operationId": "listMember",
+				"responses": {
+					"200": {
+						"description": "Valid response",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/Member"
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [{
+					"api_key": ["write:users", "read:users"]
+				}]
+			}
+		},
+		"/Role/api/runtime/ce2072984fb54c16816a35fde6194550": {
+			"get": {
+				"summary": "Get Role",
+				"operationId": "listRole",
+				"responses": {
+					"200": {
+						"description": "Valid response",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/Role"
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [{
+					"api_key": ["write:users", "read:users"]
+				}]
+			}
+		},
+		"/SwaggerAuth/api/runtime/ce2072984fb54c16816a35fde6194550": {
+			"get": {
+				"summary": "Get SwaggerAuth",
+				"operationId": "listSwaggerAuth",
+				"responses": {
+					"200": {
+						"description": "Valid response",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/SwaggerAuth"
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [{
+					"api_key": ["write:users", "read:users"]
+				}]
+			}
+		},
+		"/User/api/runtime/ce2072984fb54c16816a35fde6194550": {
+			"get": {
+				"summary": "Get User",
+				"operationId": "listUser",
+				"responses": {
+					"200": {
+						"description": "Valid response",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/User"
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [{
+					"api_key": ["write:users", "read:users"]
+				}]
+			}
+		}
+	},
+	"components": {
+		"schemas": {
+			"Diagnosis": {
+				"type": "object",
+				"properties": {
+					"code": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"id": {
+						"type": "integer"
+					},
+					"title": {
+						"type": "string"
+					},
+					"updatedAt": {
+						"type": "string"
+					}
+				},
+				"xml": {
+					"name": "Diagnosis"
+				}
+			},
+			"_File": {
+				"type": "object",
+				"properties": {
+					"createdAt": {
+						"type": "string"
+					},
+					"id": {
+						"type": "integer"
+					},
+					"updatedAt": {
+						"type": "string"
+					}
+				},
+				"xml": {
+					"name": "_File"
+				}
+			},
+			"InsurancePlan": {
+				"type": "object",
+				"properties": {
+					"createdAt": {
+						"type": "string"
+					},
+					"id": {
+						"type": "integer"
+					},
+					"maximumAnnualBenefitLimit": {
+						"type": "string"
+					},
+					"title": {
+						"type": "string"
+					},
+					"updatedAt": {
+						"type": "string"
+					}
+				},
+				"xml": {
+					"name": "InsurancePlan"
+				}
+			},
+			"Member": {
+				"type": "object",
+				"properties": {
+					"birthdate": {
+						"type": "string"
+					},
+					"cardNumber": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"firstName": {
+						"type": "string"
+					},
+					"id": {
+						"type": "integer"
+					},
+					"lastName": {
+						"type": "string"
+					},
+					"updatedAt": {
+						"type": "string"
+					}
+				},
+				"xml": {
+					"name": "Member"
+				}
+			},
+			"Role": {
+				"type": "object",
+				"properties": {
+					"canImport": {
+						"type": "boolean"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"createFilters": {
+						"type": "boolean"
+					},
+					"createFiltersForOthers": {
+						"type": "boolean"
+					},
+					"id": {
+						"type": "integer"
+					},
+					"impersonate": {
+						"type": "boolean"
+					},
+					"name": {
+						"type": "string"
+					},
+					"updatedAt": {
+						"type": "string"
+					}
+				},
+				"xml": {
+					"name": "Role"
+				}
+			},
+			"SwaggerAuth": {
+				"type": "object",
+				"properties": {
+					"createdAt": {
+						"type": "string"
+					},
+					"emailAddress": {
+						"type": "string"
+					},
+					"id": {
+						"type": "integer"
+					},
+					"password": {
+						"type": "string"
+					},
+					"updatedAt": {
+						"type": "string"
+					}
+				},
+				"xml": {
+					"name": "SwaggerAuth"
+				}
+			},
+			"User": {
+				"type": "object",
+				"properties": {
+					"active": {
+						"type": "boolean"
+					},
+					"casToken": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"developer": {
+						"type": "boolean"
+					},
+					"email": {
+						"type": "string"
+					},
+					"id": {
+						"type": "integer"
+					},
+					"name": {
+						"type": "string"
+					},
+					"readMetadata": {
+						"type": "boolean"
+					},
+					"receivesNotifications": {
+						"type": "boolean"
+					},
+					"updatedAt": {
+						"type": "string"
+					}
+				},
+				"xml": {
+					"name": "User"
+				}
+			}
+		},
+		"securitySchemes": {
+			"api_key": {
+				"type": "apiKey",
+				"name": "api_key",
+				"in": "header"
+			}
+		}
+	}
+}
